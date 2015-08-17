@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{authblk, hyperref}
+\usepackage{amsmath, amssymb, amsthm, paralist}
+\usepackage[linesnumbered]{algorithm2e}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+
+\usepackage{tikz}
+\usetikzlibrary{
+shapes,
+arrows,
+graphs,
+}
+
+\input{def}
+\input{title}
+
+\begin{document}
+
+\maketitle
+
+\input{abstract}
+\input{intro}
+\input{rational_recoloring}
+\input{greedy_algorithm}
+\input{approximation}
+\input{fixed_param}
+
+\bibliography{convex}
+\bibliographystyle{abbrv}
+
+\end{document}
