@@ -12,17 +12,17 @@ parameter $k$ is the size of an optimal solution.
 \end{theorem}
 
 \begin{proof}
-	Recall from Lemma~\ref{lm:cost} that $k = |D| - |I^*|$.
-	From Lemma~\ref{lemma:kernel} we know that $|D| \geq 2|I^*|$ and we can
-	conclude that $|D| \leq 2k$.
-	That is, the number of disconnected pairs in any colored graph is at most twice
-	the minimum number of vertices needed to be recolored by any convex recoloring.
-	Finally, Lemma~\ref{lm:optimal_path_recoloring} states that an optimal solution
-	that recolors only disconnected pairs exists.
-	Thus, given a colored graph, we can reduce, in linear time, the number of
-	vertices in the graph to no more than $4k$ by removing all singletons and connected
-	pairs.
-\qed{}\end{proof}
+Recall from Lemma~\ref{lm:cost} that $k = |D| - |I^*|$.
+From Lemma~\ref{lemma:kernel} we know that $|D| \geq 2|I^*|$ and we can
+conclude that $|D| \leq 2k$.
+That is, the number of disconnected pairs in any colored graph is at most twice
+the minimum number of vertices needed to be recolored by any convex recoloring.
+Finally, Lemma~\ref{lm:optimal_path_recoloring} states that an optimal solution
+that recolors only disconnected pairs exists.
+Thus, given a colored graph, we can reduce, in linear time, the number of
+vertices in the graph to no more than $4k$ by removing all singletons and connected
+pairs.\qed{}
+\end{proof}
 
 We use kernelization to obtain a parameterized algorithm for \TWOCR{}.
 
