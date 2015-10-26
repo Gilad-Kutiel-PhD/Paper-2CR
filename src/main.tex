@@ -1,20 +1,7 @@
 \RequirePackage{amsmath}
 \documentclass{llncs}
 
-\usepackage{url}
-\usepackage{paralist}
-\usepackage{algpseudocode, algorithm}
-
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.10}
-
-\usepackage{tikz}
-\usetikzlibrary{
-shapes,
-arrows,
-graphs,
-}
-
+\input{packs}
 \pagestyle{plain}
 
 \input{def}
@@ -24,4 +11,6 @@ graphs,
 \begin{document}
 \maketitle
 \input{doc}
+\bibliographystyle{plain}
+\bibliography{convex}
 \end{document}
