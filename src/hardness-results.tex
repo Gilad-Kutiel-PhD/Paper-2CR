@@ -1,0 +1,19 @@
+\label{sec:hard}
+In this section we describe a simple reduction from the 
+\textsc{disjoint connecting paths} problem to the weighted \TWOCR{} problem.
+Using this reduction, we prove that \textsc{weighted \TWOCR{}} can not be approximated
+within any multiplicative ratio.
+ 
+Consider the \textsc{disjoint connecting paths} problem.
+In this problem an undirected graph $G=(V,E)$ and a set of 
+pairs $\{(s_1, t_1), (s_2, t_2), \cdots, (s_k, t_k)\}$ are given, 
+and the question is whether there are $k$ vertex-disjoint paths that connect $s_i$ to $t_i$.
+This problem is known to be NP-hard~\cite{karp1972reducibility}.
+This problem can be reduced to the weighted \TWOCR{} problem,
+by assigning a unique color to each pair and a weight equal to $1$, 
+and assigning a weight of $0$ to all other vertices (and an arbitrary color).
+It follows that $k$ disjoint paths exist if and only if the minimum convex recoloring has
+a cost of zero, further, 
+any approximation algorithm to the later problem must return a solution with a cost of $0$,
+if such exists and a solution with cost different than $0$, if such does not exists, 
+and thus can solve the \textsc{disjoint connecting paths} problem.
