@@ -53,16 +53,16 @@ vertices of connected pairs.
 %
 Figure~\ref{fig:paths} depicts these concepts.
 
-\begin{figure}[t]
+\begin{wrapfigure}[13]{R}{0.4\textwidth}
 \centering
 
 \begin{tikzpicture}[]
-\node(1) at (-3,1) [colored node, red node] {1}; 
-\node(2) at (-3,-1) [colored node, red node] {2}; 
-\node(3) at (3,1) [colored node, blue node] {3}; 
-\node(4) at (3,-1) [colored node, blue node] {4}; 
-\node (5) at (-2,0) [colored node, green node] {5}; 
-\node (6) at (2, 0) [colored node, green node] {6};
+\node(1) at (-1,1) [colored node, red node] {1}; 
+\node(2) at (-1,-1) [colored node, red node] {2}; 
+\node(3) at (1,1) [colored node, blue node] {3}; 
+\node(4) at (1,-1) [colored node, blue node] {4}; 
+\node (5) at (-1,0) [colored node, green node] {5}; 
+\node (6) at (1, 0) [colored node, green node] {6};
 \node (7) at (0,0) [colored node, black node] {7}; 
 
 \draw (3) -- (6); 
@@ -80,7 +80,7 @@ the path (6, 7, 5) is not.
 Path (4, 6, 3) is in indirect conflict with path (1, 5, 2) and in direct
 conflict with path (6, 7, 5)
 }
-\end{figure}
+\end{wrapfigure}
 
 In the next lemma we show that the set of colored paths that is
 induced by a path-recoloring is an independent set of colorable paths.
