@@ -1,8 +1,9 @@
-Let $G = (V, E)$ be a graph and let $\chi : V \rightarrow C$ be a coloring function, 
-assigning each vertex in $V$ a color in $C$.  
-We say that $\chi$ is a \emph{convex coloring} of $G$, 
-if for every color $c \in C$, 
-the vertices with color $c$ induce a connected sub-graph of $G$.
+
+Let $G = (V, E)$ be a graph and let $\chi : V \rightarrow C$ be a
+coloring function, assigning each vertex in $V$ a color in $C$.  We
+say that $\chi$ is a \emph{convex coloring} of $G$, if for every color
+$c \in C$, the vertices with color $c$ induce a connected sub-graph of
+$G$.
 %
 In the \textsc{Convex Recoloring} problem (abbreviated \CRP{}), 
 we are given a colored graph $G_\chi$,
@@ -11,17 +12,18 @@ such that the resulting coloring is convex.
 That is,
 the goal is to find a convex coloring $\chi'$,
 that minimizes the size of the set $\{v : \chi(v) \neq \chi'(v)\}$.
+%
+The \textsc{$t$-Convex Recoloring} problem ($t$-\CRP{}) is the special
+case, in which the given coloring assigns the same color to at most
+$t$ vertices in $G$.
 
-The \textsc{$t$-Convex Recoloring} problem ($t$-\CRP{}) is the special case,
-in which the given coloring assigns the same color to at most $t$ vertices in $G$.
-
-The \textsc{Convex Recoloring} problem (\CRP{}) in trees was introduced 
-by Moran and Snir~\cite{MoranSnir08} and was motivated by its relation
-with the concept of \emph{perfect phylogeny}.
-They proved that the problem is NP-hard~\cite{kanj2009convex}, 
-even when the given graph is a simple path.
-Later, Kanj et al. showed that \TWOCR{} is also NP-hard on paths. 
- 
+The \textsc{Convex Recoloring} problem (\CRP{}) in trees was
+introduced by Moran and Snir~\cite{MoranSnir08} and was motivated by
+its relation with the concept of \emph{perfect phylogeny}.  They
+proved that the problem is NP-hard~\cite{kanj2009convex}, even when
+the given graph is a simple path.  Later, Kanj et
+al.~\cite{kanj2009convex} showed that \TWOCR{} is also NP-hard on
+paths.
 %
 Applications of \CRP{} in general graphs, 
 such as multicast communication, 
