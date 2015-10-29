@@ -220,16 +220,7 @@ r
 % \label{fig:upper_bound}
 % \end{figure}
 
-We show that our analysis is tight even for colored trees, using the
-instance depicted in Fig.~\ref{fig:tight}, 
-which consists of a colored graph where the greedy algorithm might recolor
-$\frac{3}{2}$ times more vertices than the optimal convex recoloring.
-%
-We note that one can simply duplicate the instance using new colors for
-each copy in order to construct an arbitrary large graph with the same
-approximation ratio.
-
-\begin{SCfigure}[15]
+\begin{wrapfigure}[16]{r}{0.41\textwidth}
 \centering
 
 \begin{tikzpicture}
@@ -260,5 +251,13 @@ a total of three recolored vertices,
 while an optimal recoloring can color two paths: (5, 1, 6) and (7, 3, 8), 
 a total of two recolored vertices.}
 \label{fig:tight}
-\end{SCfigure}
+\end{wrapfigure}
 
+We show that our analysis is tight even for colored trees, using the
+instance depicted in Fig.~\ref{fig:tight}, 
+which consists of a colored graph where the greedy algorithm might recolor
+$\frac{3}{2}$ times more vertices than the optimal convex recoloring.
+%
+We note that one can simply duplicate the instance using new colors for
+each copy in order to construct an arbitrary large graph with the same
+approximation ratio.
