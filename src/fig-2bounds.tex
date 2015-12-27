@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.70]
+\begin{axis}[
+	domain=1:10,
+	ymax=2,
+	xlabel = $\alpha$,
+	ylabel = $r$,
+	ytick = {1, 1.5, 2},
+	xtick = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+]
+	\addplot[dotted]{(2 * x - 1) / (2 * x - x)}; %
+	\addplot[black]{(x + 1) / x}; %()
+	\legend{
+  		$\frac{2 \alpha - 1}{\alpha}$,
+  		$\frac{\alpha + 1}{\alpha}$
+	}
+\end{axis}
+\end{tikzpicture}
