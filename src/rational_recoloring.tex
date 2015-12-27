@@ -19,20 +19,7 @@ we refer to a \TWOCR{} instance.
 
 \begin{figure}
 \centering
-\begin{tikzpicture}
-
-\node(1) at (0, 0) [colored node, red node] {1};
-\node(2) at (1, 0) [colored node, red node] {2};
-\node(3) at (-1, 0) [colored node, blue node] {3};
-\node(4) at (-1, 1) [colored node, blue node] {4};
-\node(5) at (1, 1) [colored node, green node] {5};
-
-\draw (1) -- (2);
-\draw (1) -- (4);
-\draw (1) -- (3);
-\draw (1) -- (5);
-
-\end{tikzpicture}
+\input{fig-pairs}
 \caption{
 	\label{fig:concepts}
 	In this colored graph, vertex 5 is a singleton, vertices 1 and 2
