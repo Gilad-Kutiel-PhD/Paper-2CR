@@ -6,17 +6,23 @@
 \newtheorem{theorem}{Theorem}
 
 \tikzset{
+/tikz/graphs/default graph/.style={
+	random seed=1,
+	spring layout,
+	spring constant=1,
+	node distance=12mm,	
+},
 colored node/.style={
-	line width=2pt, 
+	line width=1.6pt, 
 	star, 
 	minimum size=9mm,
 	inner sep=0pt,
 	scale=0.9,
 }, 
-red node/.style={draw=red, star points=2},
-blue node/.style={draw=blue, star points=3},
-green node/.style={draw=green, star points=4},
-black node/.style={draw=black, star points=5},
-orange node/.style={draw=orange, star points=6},
-violet node/.style={draw=violet, star points=7},
+red node/.style={colored node, draw=red, star points=2},
+blue node/.style={colored node, draw=blue, star points=3},
+green node/.style={colored node, draw=green, star points=4},
+black node/.style={colored node, draw=black, star points=5},
+orange node/.style={colored node, draw=orange, star points=6},
+violet node/.style={colored node, draw=violet, star points=7},
 }

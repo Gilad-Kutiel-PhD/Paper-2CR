@@ -2,7 +2,7 @@ Let $G = (V, E)$ be a graph and let $\chi : V \rightarrow C$ be a
 coloring function, assigning each vertex in $V$ a color in $C$.  We
 say that $\chi$ is a \emph{convex coloring} of $G$, if for every color
 $c \in C$, the vertices with color $c$ induce a connected sub-graph of
-$G$.
+$G$. Figure~\ref{fig:convex} show example of convex and non-convex colorings.
 %
 In the \textsc{Convex Recoloring} problem (abbreviated \CRP{}), 
 we are given a colored graph $G_\chi$,
@@ -11,6 +11,14 @@ such that the resulting coloring is convex.
 That is,
 the goal is to find a convex coloring $\chi'$,
 that minimizes the size of the set $\{v : \chi(v) \neq \chi'(v)\}$.
+\begin{figure}
+\centering
+\input{fig-convex}
+\caption{
+Example of convex and non-convex colorings
+\label{fig:convex}
+}
+\end{figure}
 %
 The \textsc{$t$-Convex Recoloring} problem ($t$-\CRP{}) is the special
 case, in which the given coloring assigns the same color to at most
