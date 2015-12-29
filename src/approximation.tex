@@ -37,7 +37,7 @@ Consider the running of the greedy algorithm at the most recent point,
 where $I$ contains no path with a distance greater than $\ell_{p'}$.  If,
 at this point, there is no path in $I$ that is in conflict with $p'$
 then nothing prevents the greedy algorithm from adding $p'$ to $I$.
-\qed{}\end{proof}
+{}\end{proof}
 
 Next, we assign each optimal path to a greedy path.
 %
@@ -79,7 +79,7 @@ associating the same vertex to more than one path implies the
 existence of such conflict. 
 Finally, only one end point of $p$ can be associated with a path in $I^*$, 
 or otherwise, $I^*$ is not independent.
-\qed{}\end{proof}
+{}\end{proof}
 
 In what follows we obtain two lower bounds on $|D|$, which translate
 into two upper bounds on the approximation ratio $r$.
@@ -94,7 +94,7 @@ connected pair and the considered recoloring is not a path-recoloring.
 Thus, we can observe the existence of at least 2 disconnected pairs
 for every path in $I^*$.  We do not count the same disconnected pair
 twice, or otherwise, $I^*$ is not independent.
-\qed{}\end{proof}
+{}\end{proof}
 
 
 \begin{observation}
@@ -105,7 +105,7 @@ $\sum_{p \in I}{d_p} = |I^*| = \alpha \cdot |I|$
 By definition every path $p' \in I^*$ has one, and only one, conflict
 source in $I$, thus, 
 there exists exactly one path $p \in I$ such that $p' \in N(p)$.
-\qed{}\end{proof}
+{}\end{proof}
 
 
 \begin{lemma}
@@ -116,7 +116,7 @@ $\frac{\sum_{p \in I}{d_p^2}}{|I|} \geq \alpha^2$.
 Due to Observation~\ref{obs:sum} we have that the average degree of
 paths in $I$ is $\alpha$, i.e. $\frac{\sum_{p \in I}{d_p}}{|I|}
 = \alpha$.  The lemma follows from the generalized mean inequality.
-\qed{}\end{proof}
+{}\end{proof}
 
 
 \begin{lemma}
@@ -157,10 +157,10 @@ Hence, by Lemma~\ref{lm:avg_ineq} we have that
 \(
 |D| \geq \sum_{p \in I} d_p^2 \geq \alpha^2 |I|
 \).
-\qed{}\end{proof}
+{}\end{proof}
 
 We can now obtain two upper bounds on the approximation ratio $r$ as a
-function of $\alpha$.
+function of $\alpha$. Figure~\ref{fig:upper_bound} depicts these two bounds.
 
 \begin{theorem}
 The greedy algorithm is a $\frac{3}{2}$-approximation algorithm for
@@ -191,7 +191,7 @@ Putting the two bound together, it follows that
 r
 \leq \frac{1}{\alpha} \cdot \min\{\alpha+1,2\alpha-1\}
 \leq    \frac{3}{2}
-\)\qed{}
+\){}
 \end{proof}
 
 

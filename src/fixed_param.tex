@@ -20,7 +20,7 @@ Finally, Lemma~\ref{lm:optimal_path_recoloring} states that an optimal solution
 that recolors only disconnected pairs exists.
 Thus, given a colored graph, we can reduce, in linear time, the number of
 vertices in the graph to no more than $4k$ by removing all singletons and connected
-pairs.\qed{}
+pairs.{}
 \end{proof}
 
 We use kernelization to obtain a parameterized algorithm for \TWOCR{}.
@@ -39,5 +39,5 @@ the parameter $k$ is the size of an optimal solution.
 	vertices, thus at most $2k^{4k}$ coloring exists. 
 	Each proposed recoloring can be tested in linear time, so the overall running
 	time of the algorithm is $O(k^2 \cdot 2k^{4k}) =  2^{O(k\log{k})}$
-\qed{}\end{proof}
+{}\end{proof}
 

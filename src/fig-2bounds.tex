@@ -1,17 +1,16 @@
-\begin{tikzpicture}[scale=0.70]
-\begin{axis}[
-	domain=1:10,
-	ymax=2,
-	xlabel = $\alpha$,
-	ylabel = $r$,
-	ytick = {1, 1.5, 2},
-	xtick = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-]
-	\addplot[dotted]{(2 * x - 1) / (2 * x - x)}; %
-	\addplot[black]{(x + 1) / x}; %()
-	\legend{
-  		$\frac{2 \alpha - 1}{\alpha}$,
-  		$\frac{\alpha + 1}{\alpha}$
-	}
-\end{axis}
+\begin{tikzpicture}[x=1cm, y=4cm, domain=1:7.4]
+
+\draw[very thin,color=gray] (0,1) grid (7.4,2.1);
+\draw[->] (0, 1) -- (7.4,1) node[right] {$\alpha$};
+\draw[->] (0, 1) -- (0,2.1) node[above] {$r$};
+
+
+\draw[blue, thick] plot (\x,{(2 - 1/\x)}) node[right] {$r \leq 2 - \frac{1}{\alpha}$};
+\draw[orange, thick] plot (\x,{(1 + 1/\x)}) node[right] {$r \leq 1 + \frac{1}{\alpha}$};
+
+\foreach \x in {0,...,7}
+\draw (\x,1) -- (\x, .95) node[anchor=north,font=\footnotesize] {$\x$};
+\foreach \y in {1,1.5,2}
+\draw (1pt,\y) -- (-3pt,\y) node[anchor=east,font=\footnotesize] {$\y$};
+
 \end{tikzpicture}
