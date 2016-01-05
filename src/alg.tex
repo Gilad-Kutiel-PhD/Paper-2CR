@@ -114,8 +114,20 @@ Notice that this is a many-to-one assignment, that is, several optimal
 paths can be assigned to a single greedy path.
 %
 For a path $p \in I$, the set of paths in $I^*$ such that $p$ is their
-conflict source is denoted as $N(p)$.  The members of $N(p)$ are
-called the \emph{neighbours} of $p$.
+conflict source is denoted as $N(p)$.
+The members of $N(p)$ are called the \emph{neighbours} of $p$.
+Figure~\ref{fig:greedy-vs-opt} depicts the mapping between paths in 
+$I^*$ and their conflict source in $I$.
+
+\begin{figure}
+\centering
+\input{fig-greedy-vs-opt}
+\caption{
+\label{fig:greedy-vs-opt}
+A compression between $I$ and $I^*$.
+Each path in $I^*$ is mapped to its conflict source in $I$.
+}
+\end{figure}
 
 Due to Lemma~\ref{lemma:assign} we have that:
 
@@ -375,6 +387,7 @@ r	=
 as required.
 {}\end{proof}
 
+Figure~\ref{fig:upper_bound} compares this last bound with the bounds of the general case. 
 To see that our analysis is tight, consider the instance depicted in
 Figure~\ref{fig:tight_path}. On this colored path, the greedy algorithm might
 recolor $\frac{5}{4}$ times more vertices than the optimal recoloring.
