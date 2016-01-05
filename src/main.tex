@@ -1,18 +1,22 @@
 \RequirePackage{amsmath}
-\documentclass{elsarticle}
+\documentclass[11pt]{article}
 
 \input{libs}
-\pagestyle{plain}
+
+\parskip = \smallskipamount
+\sloppy
+
+%\pagestyle{plain}
 
 \input{def}
 
-
 \begin{document}
+
 \input{title}
-\maketitle
+
 \input{doc}
 
-\small
+%\small
 \bibliographystyle{abbrv}
 \bibliography{convex}
 \end{document}

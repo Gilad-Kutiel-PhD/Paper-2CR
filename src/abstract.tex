@@ -7,13 +7,16 @@ connected subgraph of $G$.
 In the \textsc{Convex Recoloring} problem a colored graph $G_\chi$ is
 given, and the goal is to find a convex coloring $\chi'$ of $G$ that
 \emph{recolors} a minimum number of vertices.
+In the weighted version each vertex has a weight, 
+and the goal is to minimize the total weight of recolored vertices.
 %
 The \textsc{2-Convex Recoloring} problem (\TWOCR{}) is the special
 case, where the given coloring $\chi$ assigns the same color to at
 most two vertices.  \TWOCR{} is known to be NP-hard even if $G$ is a
 path.
 
-We show that weighted \TWOCR{} problem cannot be approximated within any ratio, unless P$=$NP.
+We show that weighted \TWOCR{} problem cannot be approximated within any ratio, 
+unless P$=$NP.
 %
 On the other hand, we provide an alternative definition of
 (unweighted) \TWOCR{} in terms of maximum independent set of paths,
