@@ -1,0 +1,49 @@
+\subfloat[Input]{
+\label{sub:in}
+\begin{tikzpicture}
+
+
+\graph[default graph]{
+	{[nodes={red node}]1,2};
+	{[nodes={blue node}]3,4};
+	{[nodes={green node}]5,6};
+	{[nodes={orange node}]7,8};
+	{[nodes={violet node}]9};
+	
+	9 -- 4 -- 6;
+	2 -- 7 -- 4;
+	3 -- 7;
+	2 -- 5 -- 6 -- 1;
+	8 -- 5;
+};
+
+
+\end{tikzpicture}}
+\hspace{1cm}
+\subfloat[Output]{
+\label{sub:out}
+\begin{tikzpicture}
+
+
+\graph[default graph]{
+	1[green node, dashed, very thick];
+	
+	{[nodes={red node}]2};
+	{[nodes={blue node}]3,4};
+	{[nodes={green node}]5,6};
+	
+	7[blue node, dashed, very thick];
+	
+	{[nodes={orange node}]8};
+	{[nodes={violet node}]9};
+
+	
+	9 -- 4 -- 6;
+	2 -- 7 -- 4;
+	3 -- 7;
+	2 -- 5 -- 6 -- 1;
+	8 -- 5;
+};
+
+
+\end{tikzpicture}}
