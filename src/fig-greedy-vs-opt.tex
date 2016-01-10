@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 
-\node(grd) at(-1,1.4) {$I$};
-\node(opt) at(4,1.4) {$I^*$};
+\node(grd) at(-1,-6.5) {$I$};
+\node(opt) at(4,-6.5) {$I^*$};
 
 \graph[
 default graph,
@@ -97,19 +97,19 @@ node distance=20mm,
 (15'.west);
 
 \draw[mapping]
-(6'.west)	to[out=180,in=90]
+(6'.north west)		to[out=135,in=90]
 (1.north);
 
 \draw[mapping]
-(8'.west)	to[out=90,in=90]
+(8'.north west)		to[out=100,in=90]
 (1.north);
 
 \draw[mapping]
-(15'.south)	to[out=180,in=-90]
+(15'.south west)	to[out=225,in=-90]
 (10.south);
 
 \draw[mapping]
-(9'.south)	to[out=180,in=-90]
+(9'.south west)		to[out=225,in=-90]
 (10.south);
 
 \end{tikzpicture}

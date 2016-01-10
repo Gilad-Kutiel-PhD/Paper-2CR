@@ -34,10 +34,10 @@ the parameter $k$ is the size of an optimal solution.
 	First reduce the size of the graph to no more than $4k$ vertices, as described
 	in the proof of Theorem~\ref{th:kernel_size}.
 	A brute force search algorithm
-	that test every possible recoloring can now be used to find an optimal one.
-	Such algorithm need to consider $2k$ colors for every vertex of the $4k$
+	that tests every possible recoloring can now be used to find an optimal one.
+	Such algorithm needs to consider $2k$ colors for every vertex of the $4k$
 	vertices, thus at most $2k^{4k}$ coloring exists. 
 	Each proposed recoloring can be tested in linear time, so the overall running
-	time of the algorithm is $O(k^2 \cdot 2k^{4k}) =  2^{O(k\log{k})}$
+	time of the algorithm is $O(k^2 \cdot 2k^{4k}) =  2^{O(k\log{k})}$.
 {}\end{proof}
 

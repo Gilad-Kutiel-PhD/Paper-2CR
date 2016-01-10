@@ -124,7 +124,7 @@ $I^*$ and their conflict source in $I$.
 \input{fig-greedy-vs-opt}
 \caption{
 \label{fig:greedy-vs-opt}
-A compression between $I$ and $I^*$.
+A comparison between $I$ (the greedy solution) and $I^*$ (an optimal solution).
 Each path in $I^*$ is mapped to its conflict source in $I$.
 }
 \end{figure}
@@ -381,6 +381,8 @@ r	=
 	(\alpha^2 + \alpha)|I| - \alpha |I|
 }
 =    \frac{\alpha^2 + \alpha - 1}{\alpha^2}
+=    \frac{5}{4} - \frac{\alpha^2/4 - \alpha + 1}{\alpha^2}
+=    \frac{5}{4} - \frac{(\alpha/2-1)^2}{\alpha^2}
 \leq \frac{5}{4}
 ,
 \]
