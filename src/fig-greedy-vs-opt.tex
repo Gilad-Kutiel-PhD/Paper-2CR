@@ -1,8 +1,5 @@
-\subfloat[Greedy solution vs optimal solution]{
+\subfloat[Greedy solution $I$ vs. optimal solution $I^*$]{
 \begin{tikzpicture}
-
-\node(grd) at(-1,-6.5) {$I$};
-\node(opt) at(4,-6.5) {$I^*$};
 
 \graph[
 default graph,
@@ -56,6 +53,9 @@ node distance=21mm,
 9' -- 8';
 };
 
+\node[below=1.9cm of 16]	{$I$};
+\node[below=1.9cm of 16']	{$I^*$};
+
 %% GREEDY PACKING
 \draw[packing]
 (1.north)	to[out=0,in=90]
@@ -100,11 +100,8 @@ node distance=21mm,
 \end{tikzpicture}}
 
 
-\subfloat[Mapping each optimal path to its greedy conflict source]{
+\subfloat[Mapping of each optimal path to its greedy source]{
 \begin{tikzpicture}
-
-\node(grd) at(-1,-6.5) {$I$};
-\node(opt) at(4,-6.5) {$I^*$};
 
 \graph[
 default graph,
@@ -158,12 +155,15 @@ node distance=21mm,
 9' --[hide] 8';
 };
 
+\node[below=1.9cm of 16]	{$I$};
+\node[below=1.9cm of 16']	{$I^*$};
+
 %% GREEDY PACKING
 \draw[packing]
 (1.north)	to[out=0,in=90]
 (2.east)	to[out=-90,in=0]
 (2.south)	to[out=180,in=180]
-(1.north);
+(1.north) node[near end, above right=1mm](pack1){};
 
 \draw[packing]
 (9.north)	to[out=0,in=90]
@@ -205,7 +205,7 @@ node distance=21mm,
 
 \draw[mapping]
 (8'.north west)		to[out=100,in=45]
-(1.north);
+(pack1.north east);
 
 \draw[mapping]
 (15'.south west)	to[out=225,in=-90]
