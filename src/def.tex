@@ -6,6 +6,14 @@
 \newtheorem{theorem}{Theorem}
 
 \tikzset{
+hide text/.style={
+	text opacity=0,
+},
+hide/.style={
+	draw=none,
+	opacity=0,
+	hide text,
+},	
 /tikz/graphs/default graph/.style={
 	random seed=1,
 	spring layout,
