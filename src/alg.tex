@@ -55,7 +55,7 @@ one should also remove all vertices with a unique color in the remaining graph.
 %
 On the remaining graph, 
 a shortest path, 
-between two vertices of the same color, 
+among those vertices of the same color, 
 is guaranteed to be colorable and independent of $I$.
 %
 In particular,
@@ -154,7 +154,8 @@ color $c$, associate the vertex that has color $c$ in $p$.  Recall
 that no two paths in $I^*$ are in conflict, and observe that
 associating the same vertex to more than one path implies the
 existence of such conflict. 
-Finally, only one end point of $p$ can be associated with a path in $I^*$, 
+Finally, since the end points of $p$ have the same color, 
+at most one of them can be associated with a path in $I^*$, 
 or otherwise, $I^*$ is not independent.
 {}\end{proof}
 
@@ -166,8 +167,9 @@ into two upper bounds on the approximation ratio $r$.
 $|D| \geq 2|I^*|$.
 \end{lemma}
 \begin{proof}
-Every path in $I^*$ has length of at least 3, or otherwise it is a
-connected pair and the considered recoloring is not a path-recoloring.
+Every path in $I^*$ has length of at least 3, 
+since its end points from a disconnected pair. 
+Also, the internal vertices must be part of another disconnected pair.
 Thus, we can observe the existence of at least 2 disconnected pairs
 for every path in $I^*$.  We do not count the same disconnected pair
 twice, or otherwise, $I^*$ is not independent.
@@ -201,7 +203,8 @@ paths in $I$ is $\alpha$, i.e. $\frac{\sum_{p \in I}{d_p}}{|I|}
 $|D| \geq \alpha^2|I|$.
 \end{lemma}
 \begin{proof}
-Let $v$ be a vertex in a path $p' \in I^*$, then $v$ must be a part of
+Let $v$ be a vertex in a path $p' \in I^*$;
+Then $v$ must be a part of
 a disconnected pair, otherwise $v$ is a singleton or part of a
 connected pair and thus the considered recoloring is not a
 path-recoloring.  Observe, also, that aside from the two endpoints of
@@ -214,8 +217,8 @@ $I^*$.  Hence
 |I^*| ~.
 \]
 
-Consider a path $p \in I$, 
-recall from Observation~\ref{co:dpLeqDp'} that if $p' \in N(p)$ 
+Consider a path $p \in I$; 
+Recall from Observation~\ref{co:dpLeqDp'} that if $p' \in N(p)$ 
 then $\ell_{p'} \geq \ell_p$.
 %
 Hence, 
