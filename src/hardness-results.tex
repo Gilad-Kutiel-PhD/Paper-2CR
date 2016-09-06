@@ -20,9 +20,9 @@ Let $G$ and $\{(s_1, t_1), \ldots, (s_k, t_k)\}$ be an instance
 of \textsc{Disjoint Connecting Paths}.  We constructed a
 weighted \TWOCR{} instance as follows.  First, we use the same graph
 $G$.  Let $\chi(v) = c_v$, if
-$v \not\in \{s_1,\ldots,s_k\} \cup \{t_1,\ldots,t_k\}$, and let
+$v \notin \{s_1,\ldots,s_k\} \cup \{t_1,\ldots,t_k\}$, and let
 $\chi(s_i) = \chi(t_i) = c_i$, for every $i$, where $c_1, \ldots, c_k$
-are distinct colors.
+and $c_v$, $v \notin \{s_1,\ldots,s_k\} \cup \{t_1,\ldots,t_k\}$ are distinct colors.
 %
 Define a weight function $w$ as follows: $w(v) = 1$, if
 $v \in \{s_1,\ldots,s_k\} \cup \{t_1,\ldots,t_k\}$, and $w(v) = 0$,
