@@ -94,7 +94,7 @@ Let $\ell_p$ be the number of vertices on a path $p$, and observe that:
 
 \begin{lemma}
 \label{lemma:assign}
-If $p' \in I^* \setminus I$ then there is a path $p \in I$ that is in
+If $p' \in I^* \setminus I$, then there is a path $p \in I$ that is in
 conflict with $p'$, and $\ell_p \leq \ell_{p'}$.
 \end{lemma}
 \begin{proof}
@@ -141,10 +141,10 @@ Our next goal is to find an upper bound to $d_p$, for $p \in I$.
 
 \begin{lemma}
 \label{lm:num_in_conflict}
-$d_p \leq \ell_p - 1$.
+For every path path $p \in I$, $d_p \leq \ell_p - 1$.
 \end{lemma}
 \begin{proof}
-Given a path $p \in I$, we show that the number of paths in $I^*$ that
+We show that the number of paths in $I^*$ that
 are in conflict with $p$ is at most $\ell_p - 1$.
 %
 Associate a vertex in $p$ to every path that is in conflict with $p$.
@@ -159,6 +159,7 @@ at most one of them can be associated with a path in $I^*$,
 or otherwise, $I^*$ is not independent.
 {}\end{proof}
 
+The \emph{length} of a path is the number of vertices it contains (including its endpoints).
 In what follows we obtain two lower bounds on $|D|$, which translate
 into two upper bounds on the approximation ratio $r$.
 
@@ -203,21 +204,22 @@ paths in $I$ is $\alpha$, i.e. $\frac{\sum_{p \in I}{d_p}}{|I|}
 $|D| \geq \alpha^2|I|$.
 \end{lemma}
 \begin{proof}
-Let $v$ be a vertex in a path $p' \in I^*$;
+Let $v$ be a vertex in a path $p' \in I^*$.
 Then $v$ must be a part of
 a disconnected pair, otherwise $v$ is a singleton or part of a
 connected pair and thus the considered recoloring is not a
 path-recoloring.  Observe, also, that aside from the two endpoints of
-each path, no two vertices of the same disconnected pair can be
-present in $I^*$ (or otherwise $I^*$ is not independent).  Thus, we
-can count $\ell_{p'} - 1$ disconnected pairs for every path $p'$ in
-$I^*$.  Hence
+each path, no two vertices of the same disconnected pair can belongs to paths
+in $I^*$ (or otherwise $I^*$ is not independent).  
+Thus, we can count $\ell_{p'} - 1$ disconnected pairs for every path $p'$ in
+$I^*$.  
+Hence
 \[
 |D| \geq \sum_{p' \in I^*} (\ell_{p'} - 1) = \sum_{p' \in I^*}{\ell_{p'}} -
 |I^*| ~.
 \]
 
-Consider a path $p \in I$; 
+Consider a path $p \in I$. 
 Recall from Observation~\ref{co:dpLeqDp'} that if $p' \in N(p)$ 
 then $\ell_{p'} \geq \ell_p$.
 %
@@ -258,7 +260,7 @@ r
 =    \frac{\alpha+1}{\alpha}
 ~, 
 $$
-and from lemma~\ref{lemma:kernel} we get that
+and from Lemma~\ref{lemma:kernel} we get that
 $$
 r
 =    \frac{|D| - |I|}{|D| - \alpha \cdot |I|}
@@ -314,7 +316,7 @@ approximation ratio.
 
 %%%%%
 
-\subsection{Anslysis for Paths}
+\subsection{Analysis for Paths}
 
 For the special case when the input graph is a path, 
 we show that the greedy algorithm achieves a $\frac{5}{4}$ approximation ratio.
@@ -324,14 +326,15 @@ We start our analysis  by observing that, in the case of a path, we can replace
 Lemma~\ref{lm:num_in_conflict} with the following lemma:
 
 \begin{lemma}
-$d_p \leq \ell_p - 2$.
+For every path $p \in I$, $d_p \leq \ell_p - 2$.
 \end{lemma}
 \begin{proof}
-Given a path $p \in I$, we show that the number of paths in $I^*$ that
-are in conflict with $p$ is at most $\ell_p - 2$.  This is true,
-because if $G$ is a  path, then for every path that is in
-conflict with $p$, we can now associate a vertex that is not one of
-the endpoints of $p$.  If the conflict is direct, then the two paths
+We show that the number of paths in $I^*$ that
+are in conflict with $p$ is at most $\ell_p - 2$.  
+This is true, because if $G$ is a  path, 
+then for every path that is in conflict with $p$, 
+we can now associate a (unique) vertex that is not one of the endpoints of $p$.  
+If the conflict is direct, then the two paths
 must overlap, thus associate the other path's endpoint.  If the
 conflict is indirect, then this must be due to some color other than
 the one on the endpoints of $p$, or else this is a direct conflict.
@@ -402,12 +405,15 @@ recolor $\frac{5}{4}$ times more vertices than the optimal recoloring.
 \centering
 \input{fig-simple-paths}
 \caption{
-The greedy algorithm might choose to color the path (2, 3, 4, 5), 
-then it must recolor one of the vertices \{1, 10\}, 
-one of \{6, 12\}, 
-and one of \{8, 11\}, 
+The greedy algorithm might choose to color the path $2 \ldots 5$, 
+then it must recolor one of the vertices \{1, 10\} 
+(the path $1 \ldots 10$ contains the path $2 \ldots 5$), 
+one of \{6, 12\}
+(the paths $2 \ldots 5$ and $6 \ldots 12$ are in indirect conflict), 
+and one of \{8, 11\}
+(the paths $2 \ldots 5$ and $8 \ldots 11$ are in indirect conflict),
 a total of five recolored vertices,
-while an optimal recoloring can recolor the paths (4, 5, 6, 7) and
-8, 9, 10, 11), a total of four recolored vertices.}
+while an optimal recoloring can recolor the paths $4 \ldots 7$ and
+$8 \ldots 11$, a total of four recolored vertices.}
 \label{fig:tight_path}
 \end{figure}

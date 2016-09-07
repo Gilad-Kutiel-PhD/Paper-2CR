@@ -1,8 +1,8 @@
 #TeXlipse project settings
-#Wed Sep 07 09:01:01 IDT 2016
+#Wed Sep 07 09:19:21 IDT 2016
 markTmpDer=true
 builderNum=8
-outputDir=out/papers/
+outputDir=out/
 makeIndSty=
 bibrefDir=
 outputFormat=pdf

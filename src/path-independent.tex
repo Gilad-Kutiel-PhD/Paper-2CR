@@ -102,23 +102,24 @@ vertices of the pair belongs to one of the paths in $I$.
 \begin{lemma}
 \label{lm:independent_set_is_recoloring}
 For any independent set of colorable paths $I$ in $G_{\chi}$, 
-there exists a convex path-recoloring $\chi'$ of $G$, 
+there exists a path-recoloring $\chi'$ of $G$, 
 where $I$ is the set of colored paths.
 \end{lemma}
 
 \begin{proof}
 Consider a recoloring $\chi'$ that colors every colorable path in $I$
-using the color of its endpoints, assigns a unique new color for
+using the color of its endpoints, assigns a unique new color 
+to one (arbitrary) of the endpoints of
 every disconnected pair that is not covered by $I$ 
 and keeps the colors of the other vertices.
 %
 We first show that $\chi'$ is a path recoloring.  
 %
 Since $I$ is independent, 
-no two paths in $I$ contain the same color;
+no two paths in $I$ contain the same color.
 Moreover,
 every path in $I$ is colorable, 
-thus it does not contain singletons; 
+thus it does not contain singletons.
 Tt follows that $\chi'$ retains all colors.  
 %
 Also, every path in $I$ does not contain any vertices of connected pairs, 
