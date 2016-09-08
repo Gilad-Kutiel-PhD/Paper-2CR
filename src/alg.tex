@@ -7,7 +7,8 @@ and define the corresponding path-recoloring it computes.
 %
 We show that the approximation ratio of the greedy algorithm is $\frac{3}{2}$.
 %
-For the special case when the input graph is path, we show that the greedy algorithm achieves a $\frac{5}{4}$ approximation ratio.
+For the special case where the input graph is a path, 
+we show that the greedy algorithm achieves a $\frac{5}{4}$ approximation ratio.
 
 %%%%%
 
@@ -90,7 +91,8 @@ r := \frac{|D| - |I|}{|D| - |I^*|}
 \]
 We now analyze the relationship between $|I|$, $|D|$ and $\alpha$.
 
-Let $\ell_p$ be the number of vertices on a path $p$, and observe that:
+Let $\ell_p$ be the number of vertices on a path $p$ (including its endpoints), 
+and observe that:
 
 \begin{lemma}
 \label{lemma:assign}
@@ -141,7 +143,7 @@ Our next goal is to find an upper bound to $d_p$, for $p \in I$.
 
 \begin{lemma}
 \label{lm:num_in_conflict}
-For every path path $p \in I$, $d_p \leq \ell_p - 1$.
+For every path $p \in I$, $d_p \leq \ell_p - 1$.
 \end{lemma}
 \begin{proof}
 We show that the number of paths in $I^*$ that
@@ -159,7 +161,6 @@ at most one of them can be associated with a path in $I^*$,
 or otherwise, $I^*$ is not independent.
 {}\end{proof}
 
-The \emph{length} of a path is the number of vertices it contains (including its endpoints).
 In what follows we obtain two lower bounds on $|D|$, which translate
 into two upper bounds on the approximation ratio $r$.
 
@@ -168,10 +169,10 @@ into two upper bounds on the approximation ratio $r$.
 $|D| \geq 2|I^*|$.
 \end{lemma}
 \begin{proof}
-Every path in $I^*$ has length of at least 3, 
-since its end points from a disconnected pair. 
+Every path $p \in I^*$ has $l_p \geq 3$, 
+since its end points form a disconnected pair. 
 Also, the internal vertices must be part of another disconnected pair.
-Thus, we can observe the existence of at least 2 disconnected pairs
+Thus, we can observe the existence of at least two disconnected pairs
 for every path in $I^*$.  We do not count the same disconnected pair
 twice, or otherwise, $I^*$ is not independent.
 {}\end{proof}
@@ -195,7 +196,7 @@ $\frac{\sum_{p \in I}{d_p^2}}{|I|} \geq \alpha^2$.
 \begin{proof}
 Due to Observation~\ref{obs:sum} we have that the average degree of
 paths in $I$ is $\alpha$, i.e. $\frac{\sum_{p \in I}{d_p}}{|I|}
-= \alpha$.  The lemma follows from the generalized mean inequality.
+= \alpha$.  The lemma follows from the Jensen's inequality.
 {}\end{proof}
 
 
@@ -287,8 +288,8 @@ as required.
 \caption{
 \label{fig:upper_bound}
 An upper bound on the approximation ratio as a function of $\alpha$.
-The blue and the orange plots are the two bounds for the general case.
-The green plot is the bound for 2-cr on simple paths.
+The dashed (blue) and the dotted (orange) plots are the two bounds for the general case.
+The solid (green) plot is the bound for 2-cr on paths.
 }
 \end{figure}
 

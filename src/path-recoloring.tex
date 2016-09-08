@@ -27,7 +27,7 @@ Observe that a retains-all recoloring does not recolor singletons.
 \input{fig-retains-all}
 \caption{
 \label{fig:retains-all}
-Example of retains-all and none retains-all (optimal) convex recolorings.
+Example of retains-all and non-retains-all (optimal) convex recolorings.
 }
 \end{figure}
 %
@@ -48,7 +48,7 @@ Assume for contradiction that $\chi'$ does not retain a color $c$,
 and let $v$ be a vertex such that $\chi(v) = c$ and $\chi'(v) = c' \neq c$.
 %
 Without loss of generality we assume that $c$ is not used by $\chi'$ 
-(otherwise, we can recolor each vertex in $G_{\chi'}[c]$ using a new unique color%
+(otherwise, we can recolor each vertex in $G_{\chi'}[c]$ using a new unique color.
 % \footnote{
 % Unique colors are used for simplicity. 
 % The new colors can be replaced by original colors, 
@@ -74,8 +74,8 @@ then $\chi''$ recolors it.
 Finally, 
 $\chi''(x) = \chi'(x)$ for any vertex $x$ not in $G_{\chi'}[c']$.
 
-$\chi''$ is convex since all vertices in
-$G_{\chi'}[c']$ are colored by different colors. 
+$\chi''$ is convex since every vertex in
+$G_{\chi'}[c']$ is colored by a unique color. 
 %
 $\chi''$ recolors at most as many vertices as $\chi'$ 
 since it may recolor $u$'s mate (if it exists), 
@@ -125,10 +125,9 @@ then we define $\chi''(u_1) = \chi''(u_2) = c'$.
 Each vertex of the remaining vertices in $G_{\chi'}[c']$ is colored by $\chi''$ 
 using a unique new color.
 %
-Observe that $\chi''$ is convex since all vertices in $G_{\chi'}[c']$
-are colored using different colors,
-with the exception of $u$ and $v$ which are colored by $c$,
-and $u_1$ and $u_2$ which are colored by $c'$ if they exist. 
+Observe that $\chi''$ is convex since every vertex in
+$G_{\chi'}[c']$ is colored by a unique color,
+with the exception of $u_1$ and $u_2$ which are colored by $c'$ if they exist. 
 %
 Observe also that $\chi''$ is a retains-all recoloring that recolors at most as
 many vertices as $\chi'$, and retains more connected pairs than $\chi'$. 
@@ -140,11 +139,11 @@ We are now ready to define \emph{path-recolorings}.
 %
 Given a colored graph $G_\chi$ and a convex recoloring $\chi'$, 
 we say that $\chi'$ \emph{path-recolors} $G$ with respect to $c \in C$ 
-if there is a Hamilton path 
+if there is a Hamiltonian path 
 \footnote{
-Note that we are not concerned with the decision problem whether a given coloring 
-is a path-coloring or not.
-Later in the paper we will introduce a simple algorithm that yields a path-coloring. 
+Note that we are not concerned with the decision problem whether a given recoloring 
+is a path-recoloring or not.
+Later in the paper we will introduce a simple algorithm that computes a path-recoloring. 
 } 
 in $G_{\chi'}[c]$: 
 $u, \dots, v$ such that $\chi(u) = \chi(v) = c$.
@@ -209,6 +208,6 @@ In particular,
 we assume that for every disconnected pair in $G$ with color $c$, 
 a recoloring either:
 \begin{inparaenum}[(i)]
-	\item colors exactly a path between the disconnected pair with color $c$.
+	\item colors exactly a path between the disconnected pair with color $c$, or
 	\item changes the color of exactly one of its vertices. 
 \end{inparaenum}
